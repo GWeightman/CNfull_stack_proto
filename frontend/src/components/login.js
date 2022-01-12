@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import { login_fetch } from "../utilities/fetches";
 
-const Login = ({setUsername, setPassword, login_handler}) => {
+const Login = ({setUsername, setPassword}) => {
+
+    const login_handler = async (e, username, password) => {
+        e.preventDefault();
+        const ret_val = await login_fetch(username)
+        if (ret_val.usr.username == username && ret_val.user.password == password) {
+          console.log(ret_val);
+        }
+    }
+
     return(
         <div>
             <h1>Awesome Company</h1>
@@ -13,7 +23,7 @@ const Login = ({setUsername, setPassword, login_handler}) => {
                 <br/>
                 <br/>
                 <button type='submit'>submit</button>
-                <button type='submit'><Link to={"/signup"}>sign up</Link></button>
+                <button><Link to={"/signup"}>sign up</Link></button>
             </form>
         </div>
     )
