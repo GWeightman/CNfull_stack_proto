@@ -7,6 +7,7 @@ import Home from './components/home';
 import Contact from './components/contact';
 import Admin from './components/admin'
 import Devpage from './components/devpage';
+import Notauth from './components/notauth';
 
 const App = () => {
   const [username, setUsername] = useState();
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='contact' element={<Contact/>}/>
           <Route path='admin' element={<Admin/>}/>
           <Route path='devpage' element={<Devpage/>}/>
+          <Route path='notauth' element={<Notauth/>}/> 
         </Routes>
       </BrowserRouter>
       

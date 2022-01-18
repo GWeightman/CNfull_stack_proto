@@ -6,9 +6,16 @@ const Login = ({setUsername, setPassword}) => {
     const login_handler = async (e, username, password) => {
         e.preventDefault();
         const ret_val = await login_fetch(username)
-        if (ret_val.usr.username == username && ret_val.user.password == password) {
-          console.log(ret_val);
-        }
+        // if (ret_val.user.username == username && ret_val.user.password == password) {
+        //   if(ret_val.user.status == "admin"){
+        //       window.location.href = "/admin"
+        //   } else {
+        //       window.location.href = "/devpage"
+        //   }
+        // } else {
+        //     window.location.href = "/notauth"
+        // }
+        console.log(ret_val)
     }
 
     return(
