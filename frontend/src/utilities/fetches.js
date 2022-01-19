@@ -1,7 +1,7 @@
 export const login_fetch = async (username, password) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user/${username}`, {
-            method: "GET",
+            method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 password: password,
