@@ -22,7 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
-          <Route path='login' element={<Login setUsername={setUsername} setPassword={setPassword}/>}/>
+          <Route path='login' element={<Login username={username} setUsername={setUsername} password={password} setPassword={setPassword}/>}/>
           <Route path='signup' element={<Signup username={username} setUsername={setUsername} password={password} setPassword={setPassword} fname={fname} setFname={setFname} sname={sname} setSname={setSname} email={email} setEmail={setEmail}/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='admin' element={<Admin/>}/>
